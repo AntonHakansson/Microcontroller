@@ -2,6 +2,9 @@
 !.gitattributes
 !.gitignore
 !readme.md
+!Makefile32
+!Makefile328p
 !*.c
 !*.h
+!"PIC Programming"/MicroOSU
 !*/

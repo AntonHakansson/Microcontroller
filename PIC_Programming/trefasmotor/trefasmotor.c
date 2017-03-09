@@ -19,25 +19,28 @@ char buttonDownThreashold = 150;
 // Program
 // =============================================================================
 void init() {
-  OSCCON = 0b01110111;
-  ANSEL = ANSELH = 0;
-  C1ON_bit = 0;  // Disable comparators
+  OSCCON = 0b01110111;  // Set clock to 8 Mhz
+  ANSEL = ANSELH = 0;   // Disable Analog to digital
+
+  // Disable comparators
+  C1ON_bit = 0;
   C2ON_bit = 0;
 
   // Configure ports as output by default
   TRISC = PORTB = TRISA = 0;
 
-  // Configure START and STOPP inputs with weak pull up enabled
+  // Configure START and STOPP as inputs
   START_PORT |= 1 << START_BIT;
   STOPP_PORT |= 1 << STOPP_BIT;
 
+  // Enable weak pull up for START & STOPP inputs
   OPTION_REG.NOT_RBPU = 0;
   WPUB |= 1 << START_BIT;
   WPUB |= 1 << STOPP_BIT;
 }
 
 void update() {
-  // Read I/O
+  // Read I/O and output result for START and STOPP
   START_OUT = Button(&START_PORT, START_BIT, buttonDownThreashold, 0);
   STOPP_OUT = Button(&STOPP_PORT, STOPP_BIT, buttonDownThreashold, 0);
 }
