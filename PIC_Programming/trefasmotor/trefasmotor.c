@@ -1,3 +1,11 @@
+/*
+  - Dimensionering av transistor-switchen
+
+    Potentialskillnaden mellan emittorn och kollektorn är 5v där emittorn går
+    till jord och på så vis är mer negativ än kollektorn 
+
+*/
+
 // =============================================================================
 // I/O configuration
 // =============================================================================
