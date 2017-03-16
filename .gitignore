@@ -6,5 +6,6 @@
 !Makefile328p
 !*.c
 !*.h
+!*.pdf
 !"PIC Programming"/MicroOSU
 !*/
