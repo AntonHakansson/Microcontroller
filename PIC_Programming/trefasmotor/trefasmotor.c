@@ -2,19 +2,23 @@
   - Dimensionering av transistor-switchen
 
     Potentialskillnaden mellan emittorn och kollektorn är 5v där emittorn går
-    till jord och på så vis är mer negativ än kollektorn 
+    till jord och på så vis är mer negativ än kollektorn
 
 */
 
 // =============================================================================
 // I/O configuration
 // =============================================================================
+
+// Inputs
 static char START_PORT at PORTB;
 static char START_BIT = 5;
-sbit START_OUT at PORTC.B5;
 
 static char STOPP_PORT at PORTB;
 static const char STOPP_BIT = 4;
+
+// Outputs
+sbit START_OUT at PORTC.B5;
 sbit STOPP_OUT at PORTC.B4;
 
 // =============================================================================
