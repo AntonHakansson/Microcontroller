@@ -2,10 +2,11 @@
 --- Dimensionering av transistor-switchen
 
     För att NPN transistorn ska leda måste två villkor uppfyllas
-      1. Emittorn ska vara mer positiv än kollektorn
-      2. Potentialskillnaden mellan basen och kollektorn ska vara ~0.6V
+      1. Kollektorn ska vara mer positiv än emittorn
+      2. Potentialskillnaden mellan basen och emittorn ska vara ~0.6V
 
-    Första villkoret är uppfyllt där Emittorn
+    Första villkoret är uppfyllt där emittorn kopplas direkt till jord och
+    Kollektorn via relät till 5v matningsspänning.
 
     För att uppfylla andra villkoret så vill vi mata transistorns bas med 0.6V
     och vill därför ha ett spänningfall från PIC-utgången som ligger 5V.
